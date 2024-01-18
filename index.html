@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+
+    <!-- Here begins my navbar -->
+
+    <div class="hero">
+    <nav>
+        <h2 class="logo">Aaron<span> Verdoold</span></h2>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#specialities">Specialities</a></li>
+            <li><a href="#mywork">My Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- This is my slogan -->
+
+    <section class="slogan">
+        <h1>Bits and Bytes: My Software <span> Adventure </span></h1>
+    </section>
+    
+    </div>
+
+    <!-- Here is the section About me -->
+
+    <section id="about" class="about">
+        <div class="main">
+            <img src="img/Aaronpic1.jpg" alt="Description of the image">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <h5>Developer and <span>Designer</span></h5>
+                <p>My name is Aaron Verdoold. I’m 17 years old and live Gouda in the Netherlands. I’m a first year software developer. 
+                    My goal is to bring you the best website you have ever seen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Here I explain my education -->
+
+    <section id="education" class="education">
+        <div class="education-text">
+             <h2>Education</h2>
+             <p>MBO Rjnland</p>
+             <p>2023 - Present</p>
+             <p>Software Developer</p>
+             <p>Niveau 4 bol</p>
+        </div>
+    </section>
+
+    <!-- Here you can download my cv -->
+
+    <section id="cv" class="cv">
+        <div class="cv-text">
+            <h2>CV</h2>
+            <a href="Aaron's Resume.pdf" download class="cv-button">Download CV</a>
+        </div>
+    </section>
+
+    <!-- Here I explain my specialities -->
+
+    <section id="specialities" class="specialities">
+        <div class="specialities-text">
+            <h2>Specialities</h2>
+            <p>  As a  young software developer, I can work with UXUI. I can work with 
+            HTML, CSS, PHP and a little bit of
+            JavaScript. My specialities include developing user-friendly interfaces. I'm a quick learner and adaptable to new technologies and frameworks.
+            I bring fresh perspectives and innovative ideas to problem solving, fostering creativity in software development. I thrive in a collaborative environment, teamwork
+            and communication for my projects. I have a genuine passion for continuous learning and self-development. I am a goal oriented, hard working and highly disciplined.</p>
+         </div>
+    </section>
+
+    <!-- Here you can see my latest projects -->
+
+    <section id="mywork" class="work">
+        <div class="work-text">
+           <h2>My Work</h2>
+             <div class="work-list">
+                <div class="work-som">
+                    <img src="img/gymweb.jpg" alt="Description of the image">
+                    <div class="layer">
+                        <script src="https://kit.fontawesome.com/ffba255723.js" crossorigin="anonymous"></script>
+                        <h3>Gym website</h3>
+                        <p>It is a gym webiste that shows a 10 minute workout video and can become a member</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="work-som" class="work">
+                    <img src="img/gameblog.jpg" alt="Description of the image">
+                    <div class="layer">
+                        <h3>Game blog</h3>
+                        <p>It is a gameblog webiste where you can write your reviews for the games you played.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="work-som" class="work">
+                    <img src="img/como.jpg" alt="Description of the image">
+                    <div class="layer">
+                        <h3>Travel blog</h3>
+                        <p>It is a travel blog webiste where you can find information about different countries and get some tips. </p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Here you can visit my socials and can contact me -->
+
+    <script src="https://kit.fontawesome.com/ffba255723.js" crossorigin="anonymous"></script>
+
+    <div id="contact">
+        <form>
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                    <div class="gegevens">
+                        <div class="nummer">
+                            <p><i class="fas fa-paper-plane"></i> aaronverdoold770@gmail.com</p>
+                            <p><i class="fa-solid fa-phone"></i> 06-24836926</p>
+                            <div class="social-icons">
+                                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                                <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                                <a href="https://www.instagram.com/aaronverdoold/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/aaron-verdoold-7796842aa/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="input-gegevens">
+                            <form action="index.php" method="post">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="contact-button">Submit</button>
+                        </form>
+                        </div>
+                    </div>
+                <div class="contact-right"> </div>
+            </div>
+        </div>
+        </form>
+    </div>
+
+    <!-- Smooth scrolling script -->
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
