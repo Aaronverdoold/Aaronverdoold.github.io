@@ -280,11 +280,11 @@ span{
 
 .work:hover img{
     transform: scale(1.1);
-    border-radius: 30px;
 }
 
 .work:hover .layer{
     height: 100%;
+    border-radius: 10px;
 }
 
 .contact{
