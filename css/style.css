@@ -1,8 +1,13 @@
+
+/* This is the body of the website */
+
 body {
     background: rgb(2,0,36);
     background: linear-gradient(180deg, rgba(2,0,36,1) 20%, rgba(9,111,121,1) 70%, rgba(255,175,0,1) 100%);
     
 }
+
+/* Here is the styling of the navbar */
 
 .navbar {
     background-color: rgba(0, 0, 0, 0.5); 
@@ -63,6 +68,8 @@ nav ul li a {
   }
   
 
+/* This is the slogan in the beginning */
+
 .slogan{
     margin-bottom: 40px;
     width: 100%;
@@ -93,9 +100,13 @@ nav ul li a {
 
 }
 
+/* This makes sure that the other half of the word turns orange */
+
 span{
     color: #ea8315;
 }
+
+/* Here is the styling of the about me section */
 
 .about{
      width: 100%;
@@ -145,6 +156,8 @@ span{
     margin-bottom: 45px
 }
 
+/* Education styling */
+
 .education{
     padding: 100px 0px;
     text-align: center;
@@ -168,6 +181,8 @@ span{
     margin-left: 40px;
 }
 
+/* Styling of my CV */
+
 .cv{
     padding: 75px 0px;
     text-align: center;
@@ -180,6 +195,8 @@ span{
     text-transform: capitalize;
     margin-bottom: 20px;
 }
+
+/* This is the button of my CV  */
 
 .cv-button{
     top: 25px;
@@ -197,9 +214,13 @@ span{
     transition: 0.5s;
 }
 
+/* This makes sure that it goes smoothly up and down */
+
 .cv-button:hover{
     transform: translateY(-5px);
   }
+
+/* Styling of the specialities */
 
 .specialities{
     padding: 100px 0px;
@@ -223,6 +244,8 @@ span{
     max-width: 95%;
     margin-left: 50px;
 }
+
+/* Styling of my work */
 
 .work{
     padding: 50px 0;
@@ -307,6 +330,8 @@ span{
     border-radius: 10px;
 }
 
+/* Styling of my contact */
+
 .contact{
     padding: 100px 0px;
     text-align: center;
@@ -368,6 +393,8 @@ span{
     font-size: 25px;
 }
 
+/* Styling of the icons */
+
 .social-icons{
     margin-top: 30px;
     display: flex;
@@ -417,6 +444,8 @@ span{
     font-size: 18px;
     border-radius: 6px;
 }
+
+/* This is the styling of the contact button */
 
 .contact-button{
     top: 25px;
