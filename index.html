@@ -123,41 +123,94 @@
 
     <script src="https://kit.fontawesome.com/ffba255723.js" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <div id="contact">
-        <form form action="https://formspree.io/f/mvoevpvq"
-        method="POST">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                    <div class="gegevens">
-                        <div class="nummer">
-                            <p><i class="fas fa-paper-plane"></i> aaronverdoold770@gmail.com</p>
-                            <p><i class="fa-solid fa-phone"></i> 06-24836926</p>
-                            <div class="social-icons">
-                                <a href="https://github.com/Aaronverdoold/Aaronverdoold.github.io" target="_blank"><i class="fa-brands fa-github"></i></a>
-                                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                                <a href="https://www.instagram.com/aaronverdoold/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/aaron-verdoold-7796842aa/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <form id="contact-form" method="POST">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <div class="gegevens">
+                            <div class="nummer">
+                                <p><i class="fas fa-paper-plane"></i> aaronverdoold770@gmail.com</p>
+                                <p><i class="fa-solid fa-phone"></i> 06-24836926</p>
+                                <div class="social-icons">
+                                    <a href="https://github.com/Aaronverdoold/Aaronverdoold.github.io" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/aaronverdoold/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/aaron-verdoold-7796842aa/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Contact Form -->
+                            <div class="input-gegevens">
+                                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                                <textarea name="message" id="message" rows="6" placeholder="Your Message" required></textarea>
+                                <button type="submit" class="contact-button">Submit</button>
                             </div>
                         </div>
-   
-    <!-- Here you can contact me -->
-
-                        <div class="input-gegevens">
-                            <form action="index.php" method="post">
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="Your Email" required>
-                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="contact-button">Submit</button>
-                        </form>
-                        </div>
                     </div>
-                <div class="contact-right"> </div>
+                    <div class="contact-right"></div>
+                </div>
             </div>
-        </div>
         </form>
     </div>
+
+    <!-- JavaScript to handle form submission with proper toast notifications -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent normal form submission
+
+            const formData = new FormData(this);
+
+            // Function to show toast notifications
+            function showToast(type, message) {
+                Swal.fire({
+                    toast: true,
+                    position: 'bottom-left',
+                    icon: type,
+                    title: message,
+                    showConfirmButton: false,
+                    timer: 3000
+                });
+            }
+
+            // Send data to Formspree
+            fetch('https://formspree.io/f/mvoevpvq', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        showToast('success', 'Message sent successfully!');
+                    } else {
+                        showToast('error', 'Failed to send message.');
+                    }
+                })
+                .catch(error => {
+                    showToast('error', 'Error sending message.');
+                });
+
+            fetch('backend/dbconnect.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(responseText => {
+                    console.log('Database response:', responseText);
+                    showToast('success', 'Message saved successfully!');
+                })
+                .catch(error => {
+                    showToast('error', 'Error saving data.');
+                });
+
+            this.reset();
+        });
+    </script>
 
     <!-- Smooth scrolling script -->
     <script>
